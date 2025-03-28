@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Progress, Text } from '@pancakeswap/uikit'
 import { Token } from '@orbitalswap/sdk'
+import { buyTokenSymbol } from 'components/Menu/config/config'
 
 interface LaunchpadProgressProps {
   softcap: number
@@ -34,7 +35,7 @@ const ProgressBar = styled.div`
 `
 const LaunchpadCardProgress: React.FC<LaunchpadProgressProps> = ({ softcap, hardcap, raised, currency }) => {
   const progress1 = (raised / (hardcap ?? 1)) * 100
-  const buyTokenSymbol = 'ETH'
+
   // const lockupDays = liquidityLockupTime / 86400
 
   return (

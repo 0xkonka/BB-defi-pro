@@ -7,9 +7,7 @@ interface LogoProps extends SvgProps {
 }
 
 const Icon: React.FC<LogoProps> = ({ isDark, ...props }) => {
-  return (
-    <Image src="/logo.png" width="60" height="60" />
-  );
+  return <Image src="/BB_logo_cream.svg" width="60" height="60" />;
 };
 
 export default Icon;

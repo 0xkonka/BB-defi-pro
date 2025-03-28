@@ -8,7 +8,7 @@ const farms: SerializedFarmConfig[] = [
   /**
    * These 3 farms (PID 0, 2, 3) should always be at the top of the file.
    */
-   {
+  {
     pid: 0,
     lpSymbol: 'ORB',
     lpAddresses: {
@@ -16,7 +16,8 @@ const farms: SerializedFarmConfig[] = [
       56: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
       43113: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
       84531: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
-      8453: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B'
+      8453: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
+      42161: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
     },
     token: serializedTokens.syrup,
     quoteToken: serializedTokens.wbnb,
@@ -29,7 +30,8 @@ const farms: SerializedFarmConfig[] = [
       56: '0x451a503b59A4DEA428b8eb88D6df27DE8A7fcfe1',
       43113: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
       84531: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
-      8453: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B'
+      8453: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
+      42161: '0x42b98A2f73a282D731b0B8F4ACfB6cAF3565496B',
     },
     token: serializedTokens.orb,
     quoteToken: serializedTokens.wbnb,

@@ -22,6 +22,9 @@ export type ConfigMenuItemsType = Omit<MenuItemsType, 'items'> & { hideSubNav?: 
   items?: ConfigMenuDropDownItemsType[]
 }
 
+export const buyTokenSymbol = 'USDT'
+export const presaleTokenSymbol = 'Better Bank' // TODO: change to the actual token symbol
+
 const config: (t: ContextApi['t'], isDark: boolean, languageCode?: string) => ConfigMenuItemsType[] = (
   t,
   isDark,

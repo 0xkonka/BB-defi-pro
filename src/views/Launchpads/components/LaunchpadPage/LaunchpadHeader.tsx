@@ -13,7 +13,7 @@ const BombFilledIcon = styled.img`
   margin-left: 20px;
   margin-bottom: 8px;
   max-width: 120px;
-`;
+`
 const StyledLaunchpadHeader = styled(Flex)`
   display: flex;
   justify-content: center;
@@ -31,19 +31,18 @@ const Description = styled(Text)`
   color: ${({ theme }) => theme.colors.textSubtle};
   font-size: 14px;
   text-align: left;
-  margin-left : 1.5rem;
+  margin-left: 1.5rem;
 `
 
 const LaunchpadHeader: React.FC = () => {
   const { theme } = useTheme()
   return (
     <StyledLaunchpadHeader mb="12px" alignItems="center">
-      <BombFilledIcon src="/images/bomb-filled.png" width={80} height={80} />
+      <BombFilledIcon src="/BB_logo_cream.svg" width={80} height={80} />
       <div>
-        <Name>BASEBOMB</Name>
-      </div> 
+        <Name>Better Bank</Name>
+      </div>
     </StyledLaunchpadHeader>
   )
-
 }
-export default LaunchpadHeader;
+export default LaunchpadHeader

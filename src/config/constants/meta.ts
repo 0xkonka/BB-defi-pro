@@ -3,10 +3,9 @@ import { ContextApi } from 'contexts/Localization/types'
 import { PageMeta } from './types'
 
 export const DEFAULT_META: PageMeta = {
-  title: 'BASEBOMB',
-  description:
-    'The Future of Defi, The Next Generation In Defi Tools and Trading',
-  image: 'https://basebomb.finance/images/hero.png',
+  title: 'Better Bank',
+  description: 'The Future of Defi, The Next Generation In Defi Tools and Trading',
+  image: 'https://betterbank.finance/images/hero.png',
 }
 interface PathList {
   paths: { [path: string]: { title: string; basePath?: boolean; description?: string } }
@@ -45,7 +44,7 @@ const getPathList = (t: ContextApi['t']): PathList => {
       '/pancake-squad': { basePath: true, title: t('Pancake Squad') },
     },
 
-    defaultTitleSuffix: t('BASEBOMB'),
+    defaultTitleSuffix: t('Better Bank'),
   }
 }
 

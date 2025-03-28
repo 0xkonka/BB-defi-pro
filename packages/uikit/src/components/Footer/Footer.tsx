@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { baseColors, darkColors, lightColors } from "../../theme/colors";
 import { Flex, Box } from "../Box";
-import {Text} from "../Text";
+import { Text } from "../Text";
 import { Link } from "../Link";
 import {
   StyledFooter,
@@ -62,8 +62,10 @@ const MenuItem: React.FC<FooterProps> = ({
       <Flex flexDirection="column" width={["100%", null, "1200px;"]} zIndex={100}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
           <SocialLinks order={[2, null, 1]} pb={["42px", null, "32px"]} />
-          <Image src="/images/basebomb.png" isDark width={160} height={17} />
-          <Text mt={12}>runs on the fastest Layer2 blockchain Base</Text>
+          {/* <Image src="/images/basebomb.png" isDark width={160} height={17} /> */}
+          <Text fontSize="24px" fontWeight="bold">
+            Better Bank
+          </Text>
         </StyledIconMobileContainer>
         <Flex
           order={[1, null, 2]}
@@ -75,8 +77,10 @@ const MenuItem: React.FC<FooterProps> = ({
           <Box>
             <Box display={["none", null, "block"]}>
               <SocialLinks order={[2, null, 1]} pb={["42px", null, "32px"]} />
-              <Image src="/images/basebomb.png" isDark width={160} height={17} />
-              <Text mt={12}>runs on the fastest Layer2 blockchain Base</Text>
+              {/* <Image src="/images/basebomb.png" isDark width={160} height={17} /> */}
+              <Text fontSize="24px" fontWeight="bold">
+                Better Bank
+              </Text>
             </Box>
           </Box>
           {items?.map((item) => (
@@ -103,8 +107,8 @@ const MenuItem: React.FC<FooterProps> = ({
           ))}
         </Flex>
       </Flex>
-      <EarthQuake src="/images/earthquake.png" isMd={isMd} isMobile={isMobile} />
-      <Bomb src="images/flamingbomb.png" isMd={isMd} isMobile={isMobile} />
+      {/* <EarthQuake src="/images/earthquake.png" isMd={isMd} isMobile={isMobile} /> */}
+      {/* <Bomb src="images/flamingbomb.png" isMd={isMd} isMobile={isMobile} /> */}
     </StyledFooter>
   );
 };

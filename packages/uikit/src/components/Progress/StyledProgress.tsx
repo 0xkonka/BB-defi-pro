@@ -16,9 +16,9 @@ export const Bar = styled.div<ProgressBarProps>`
   left: 0;
   background: ${({ theme, $useDark, primary, $background }) => {
     if ($background) return $background;
-    if ($useDark) return primary ? theme.colors.gradients.button : `${theme.colors.secondary}80`;
+    if ($useDark) return primary ? theme.colors.gradients.progress : `${theme.colors.secondary}80`;
     return primary ? lightColors.secondary : `${lightColors.secondary}80`;
-  }}; 
+  }};
   height: 100%;
   transition: width 200ms ease;
 `;
@@ -35,7 +35,7 @@ interface StyledProgressProps {
 
 const StyledProgress = styled.div<StyledProgressProps>`
   position: relative;
-  background-color: ${({ theme, $useDark }) => ($useDark ? 'none' : lightColors.secondary)};
+  background-color: ${({ theme, $useDark }) => ($useDark ? "none" : lightColors.secondary)};
   box-shadow: ${({ theme }) => theme.shadows.inset};
   overflow: hidden;
   height: 30px;

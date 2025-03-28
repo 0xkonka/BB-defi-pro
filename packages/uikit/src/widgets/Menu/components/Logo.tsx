@@ -50,10 +50,10 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   const { isMobile, isMd } = useMatchBreakpoints();
   const innerLogo = (
     <>
-      {(isMobile || isMd) ? (
+      {isMobile || isMd ? (
         <LogoIcon className="mobile-icon" isDark={isDark} />
       ) : (
-        <LogoWithTextIcon className="desktop-icon" isDark={isDark} width={180} height={61} />
+        <LogoWithTextIcon className="desktop-icon" isDark={isDark} width={61} height={61} />
       )}
     </>
   );

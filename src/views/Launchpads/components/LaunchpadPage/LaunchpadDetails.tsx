@@ -7,6 +7,8 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { PresaleConfig, PresaleStatus } from 'hooks/usePresale'
 import { formatBigNumber } from 'utils/formatBalance'
 import { Item } from '../LaunchpadLayout'
+import { presaleTokenSymbol } from 'components/Menu/config/config'
+import { buyTokenSymbol } from 'components/Menu/config/config'
 
 export interface LaunchpadDetailsProps {
   presaleConfig: PresaleConfig
@@ -34,13 +36,7 @@ const LaunchpadDetails: React.FC<LaunchpadDetailsProps> = ({ presaleConfig, pres
     listing_price: presalePrice,
   } = presaleConfig || {}
 
-  const {
-    totalRaised,
-    totalSold
-  } = presaleStatus || {}
-
-  const buyTokenSymbol = 'ETH'
-  const presaleTokenSymbol = 'BASEBOMB';
+  const { totalRaised, totalSold } = presaleStatus || {}
 
   return (
     <>
@@ -54,25 +50,32 @@ const LaunchpadDetails: React.FC<LaunchpadDetailsProps> = ({ presaleConfig, pres
               hour: 'numeric',
               minute: '2-digit',
               timeZone: 'America/Toronto',
-            })} (EDT)`
-            }
+            })} (EDT)`}
           </Text>
         </Item>
         <Item>
           <Display>{t('Hardcap')}</Display>
-          <Text>{formatBigNumber(hardcap ?? BigNumber.from(0))} {buyTokenSymbol}</Text>
+          <Text>
+            {formatBigNumber(hardcap ?? BigNumber.from(0))} {buyTokenSymbol}
+          </Text>
         </Item>
         <Item>
           <Display>{t('TokenPrice')}</Display>
-          <Text>{formatBigNumber(presalePrice ?? BigNumber.from(0))} {presaleTokenSymbol}</Text>
+          <Text>
+            {formatBigNumber(presalePrice ?? BigNumber.from(0))} {presaleTokenSymbol}
+          </Text>
         </Item>
         <Item>
           <Display>{t('Min Buy')}</Display>
-          <Text>{formatBigNumber(minPerTx ?? BigNumber.from(0))} {buyTokenSymbol}</Text>
+          <Text>
+            {formatBigNumber(minPerTx ?? BigNumber.from(0))} {buyTokenSymbol}
+          </Text>
         </Item>
         <Item>
           <Display>{t('Max Buy')}</Display>
-          <Text>{formatBigNumber(maxPerUser ?? BigNumber.from(0))} {buyTokenSymbol}</Text>
+          <Text>
+            {formatBigNumber(maxPerUser ?? BigNumber.from(0))} {buyTokenSymbol}
+          </Text>
         </Item>
         <Item>
           <Display>{t('Total raised (% of target)')}</Display>
@@ -81,7 +84,6 @@ const LaunchpadDetails: React.FC<LaunchpadDetailsProps> = ({ presaleConfig, pres
             {/* {`(${totalRaised.div(hardcap).times(100).toFixed(2)}%)`} */}
           </Text>
         </Item>
-
       </StyledLaunchpadDetails>
     </>
   )

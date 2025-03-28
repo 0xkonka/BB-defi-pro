@@ -7,9 +7,7 @@ interface LogoProps extends SvgProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ isDark, ...props }) => {
-  return (
-    <Image src="/images/logo-with-text.png" {...props} />
-  );
+  return <Image src="/BB_logo_cream.svg" {...props} />;
 };
 
 export default React.memo(Logo, (prev, next) => prev.isDark === next.isDark);

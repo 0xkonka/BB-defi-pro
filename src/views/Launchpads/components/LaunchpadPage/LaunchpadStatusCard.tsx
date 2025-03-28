@@ -8,6 +8,7 @@ import { DeserializedLaunchpad } from 'state/types'
 import { PresaleConfig, PresaleStatus, UserStatus } from 'hooks/usePresale'
 import { formatBigNumber } from 'utils/formatBalance'
 import { Item } from '../LaunchpadLayout'
+import { buyTokenSymbol } from 'components/Menu/config/config'
 
 export interface LaunchpadStatusProps {
   status: LaunchpadStatus
@@ -32,8 +33,6 @@ const LaunchpadStatusCard: React.FC<LaunchpadStatusProps> = ({ status, presaleCo
   const { min_contribution: minPerTx, max_contribution: maxPerUser, listing_price: presalePrice } = presaleConfig || {}
   const { totalContributors } = presaleStatus || {}
   const { amount: contributedAmount, claimed_amount: totalTokensBought } = userStatus || {}
-
-  const buyTokenSymbol = 'ETH'
 
   const purchaseTokenAmount =
     Number(formatBigNumber(presalePrice ?? BigNumber.from(0))) *

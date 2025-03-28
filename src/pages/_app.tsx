@@ -54,19 +54,16 @@ function MyApp(props: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, viewport-fit=cover"
         />
-        <meta
-          name="description"
-          content="BASEBOMB - The Future of DeFi"
-        />
+        <meta name="description" content="Better Bank - The Future of DeFi" />
         <meta name="theme-color" content="#38D7CD" />
-        <meta name="twitter:image" content="https://basebomb.finance/images/hero.png" />
+        <meta name="twitter:image" content="https://betterbank.finance/images/hero.png" />
         <meta
           name="twitter:description"
-          content="BASEBOMB - The Future of DeFi, The Next Generation In Defi Tools and Trading."
+          content="Better Bank - The Future of DeFi, The Next Generation In Defi Tools and Trading."
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BASEBOMB - The Future of DeFi" />
-        <title>BASEBOMB</title>
+        <meta name="twitter:title" content="Better Bank - The Future of DeFi" />
+        <title>Better Bank</title>
       </Head>
       <Providers store={store}>
         <Blocklist>

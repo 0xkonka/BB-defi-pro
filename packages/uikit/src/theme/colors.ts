@@ -8,7 +8,7 @@ export const baseColors = {
   secondary: "#9439EC",
   success: "#00FFA3",
   warning: "#FF4747",
-  white: "#FFFFFF"
+  white: "#FFFFFF",
 };
 
 export const additionalColors = {
@@ -50,7 +50,8 @@ export const lightColors: Colors = {
     violet: "linear-gradient(180deg, #E2C9FB 0%, #CDB8FA 100%)",
     violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
     gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
-    button: "linear-gradient(143deg, #00C2FF 0%, #CA1CE6 100%)",
+    progress: "linear-gradient(143deg, #F7C961 0%, #6AA286 100%)",
+    button: "#509d7c",
   },
 };
 
@@ -62,7 +63,7 @@ export const darkColors: Colors = {
   backgroundDisabled: "#3c3742",
   backgroundAlt: "#171717",
   backgroundAlt2: "rgba(39, 38, 44, 0.7)",
-  backgroundAlt3: "rgba(158, 172, 208, 0.30)",
+  backgroundAlt3: "rgba(24, 24, 24,0.5)",
   cardBorder: "#949494",
   walletModal: "#343955CC",
   walletModalStrong: "#343955",
@@ -88,6 +89,7 @@ export const darkColors: Colors = {
     violet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",
     violetAlt: "linear-gradient(180deg, #434575 0%, #66578D 100%)",
     gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
-    button: "linear-gradient(143deg, #CA1CE6 0%, #00C2FF 100%)"
+    progress: "linear-gradient(143deg, #F7C961 0%, #6AA286 100%)",
+    button: "#509d7c",
   },
 };

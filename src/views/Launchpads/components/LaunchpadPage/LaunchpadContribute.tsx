@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import {BigNumber} from '@ethersproject/bignumber'
+import { BigNumber } from '@ethersproject/bignumber'
 import { useModal, Text } from '@pancakeswap/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { LaunchpadStatus } from 'config/constants/types'
@@ -10,6 +10,7 @@ import { formatBigNumber } from 'utils/formatBalance'
 import { fetchMerkleProof } from 'views/Launchpads/api'
 import LabelButton from './LabelButton'
 import ContributeModal from './ContributeModal'
+import { buyTokenSymbol } from 'components/Menu/config/config'
 
 export interface Props {
   status: LaunchpadStatus
@@ -22,16 +23,15 @@ export interface Props {
 const LaunchpadContribute: React.FC<Props> = ({ status, presaleConfig, presaleStatus, userStatus, whiteListed }) => {
   const [pendingTx, setPendingTx] = useState(false)
 
-  const { account } = useWeb3React();
+  const { account } = useWeb3React()
 
-  const {min_contribution: minPerTx, max_contribution: maxPerUser} = presaleConfig || {};
-  const {totalRaised} = presaleStatus || {};
-  const {amount: contributedAmount} = userStatus || {};
-  const buyTokenSymbol = 'ETH'
+  const { min_contribution: minPerTx, max_contribution: maxPerUser } = presaleConfig || {}
+  const { totalRaised } = presaleStatus || {}
+  const { amount: contributedAmount } = userStatus || {}
 
-  const tokenSaleContract = useTokenSaleContract();
+  const tokenSaleContract = useTokenSaleContract()
 
-  const {onClaim} = usePresale();
+  const { onClaim } = usePresale()
 
   const [onPresentContributeModal] = useModal(
     <ContributeModal
@@ -42,7 +42,7 @@ const LaunchpadContribute: React.FC<Props> = ({ status, presaleConfig, presaleSt
 
   const claim = async () => {
     if (tokenSaleContract) {
-      const merkleProof = fetchMerkleProof(account);
+      const merkleProof = fetchMerkleProof(account)
       try {
         setPendingTx(true)
         await onClaim(merkleProof)
@@ -56,8 +56,8 @@ const LaunchpadContribute: React.FC<Props> = ({ status, presaleConfig, presaleSt
 
   const isFinished = status === 'upcoming'
   const percentOfUserContribution = useMemo(() => {
-    if (!totalRaised) return 0;
-    return Number(formatBigNumber(contributedAmount)) / Number(formatBigNumber(totalRaised)) * 100;
+    if (!totalRaised) return 0
+    return (Number(formatBigNumber(contributedAmount)) / Number(formatBigNumber(totalRaised))) * 100
   }, [totalRaised, contributedAmount])
 
   if (status === 'live') {
@@ -93,7 +93,7 @@ const LaunchpadContribute: React.FC<Props> = ({ status, presaleConfig, presaleSt
             formatBigNumber(contributedAmount ?? BigNumber.from(0))
           }
           // eslint-disable-next-line @typescript-eslint/no-empty-function
-          onClick={()=>{}}
+          onClick={() => {}}
         />
         <Text fontSize="14px" color="textSubtle">
           {isFinished ? `Tokens will be airdropped on Avax` : `${percentOfUserContribution.toFixed(2)}% of total`}

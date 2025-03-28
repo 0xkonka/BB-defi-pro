@@ -22,7 +22,7 @@ const Background = styled.img`
   left: 0px;
   object-fit: cover;
   width: 100%;
-  min-height: 1000px;
+  min-height: 1200px;
   background-color: lightgray;
   opacity: 0.5;
 `;
@@ -136,13 +136,13 @@ const Menu: React.FC<NavProps> = ({
   const subLinksMobileOnly = subLinks?.filter((subLink) => subLink.isMobileOnly);
   return (
     <MenuContext.Provider value={{ linkComponent }}>
-      <Background src="/images/main_bg.png" />
+      <Background src="/images/main_bg.webp" />
       <Wrapper>
         <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
           <StyledNav>
             <Grid gridTemplateColumns="180px 1fr" width="100%">
               <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-              {!isMobile && !isMd && (
+              {/* {!isMobile && !isMd && (
                 <MenuItems
                   items={links}
                   activeItem={activeItem}
@@ -152,7 +152,7 @@ const Menu: React.FC<NavProps> = ({
                   borderRadius="50px"
                   background={theme.colors.backgroundAlt3}
                 />
-              )}
+              )} */}
             </Grid>
             <Flex alignItems="center" height="100%">
               {!isMobile && !isMd && (

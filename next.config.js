@@ -41,7 +41,7 @@ const config = {
     domains: ['static-nft.pancakeswap.com'],
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   async rewrites() {
     return [
@@ -62,7 +62,7 @@ const config = {
   async headers() {
     return [
       {
-        source: '/logo.png',
+        source: '/BB_logo_cream.svg',
         headers: [
           {
             key: 'Cache-Control',
@@ -106,7 +106,7 @@ const config = {
         source: '/pools',
         destination: '/404',
         permanent: true,
-      }
+      },
     ]
   },
 }

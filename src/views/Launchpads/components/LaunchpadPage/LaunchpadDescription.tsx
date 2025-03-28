@@ -47,7 +47,7 @@ const LaunchpadDescription: React.FC = () => {
   return (
     <StyledLaunchpadDescription>
       <Divider />
-      <Description>{`Welcome to BaseBOMB, your go-to for groundbreaking DeFi innovations. Launching on BaseChain, we're more than a token. Our platform features state-of-the-art DeX versions, a Launchpad, NFT Staking, automated arbitrage bots, and Single Side Staking and much more, coming in future. Ready for explosive financial growth? Enlist with BaseBOMB today.`}</Description>
+      <Description>{`Welcome to Better Bank, your go-to for groundbreaking DeFi innovations. Launching on BaseChain, we're more than a token. Our platform features state-of-the-art DeX versions, a Launchpad, NFT Staking, automated arbitrage bots, and Single Side Staking and much more, coming in future. Ready for explosive financial growth? Enlist with Better Bank today.`}</Description>
       <Divider />
     </StyledLaunchpadDescription>
   )
